@@ -10,6 +10,7 @@ import {
   bubbleFiltrationAndСoncat,
   conversionAndSorting,
 } from "./js/day3.js";
+import { objectToArray, Worker } from "./js/day4.js";
 
 document.getElementById("uniqueLetters").textContent =
   uniqueLetters("DDADSADASDAAADS");
@@ -48,3 +49,12 @@ document.getElementById("conversionAndSorting").textContent =
     [1, 3, 4],
     [2, 6],
   ]);
+
+document.getElementById("objectToArray").textContent = objectToArray({
+  a: 1,
+  b: 2,
+});
+
+let worker = new Worker("Дмитрий", "Мунько", 500, 20);
+
+document.getElementById("worker").textContent = worker.getInfo();
