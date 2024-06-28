@@ -18,6 +18,8 @@ const objectToArray = (object) => {
 
 // Модифицируйте класс Worker из предыдущей задачи следующим образом: сделайте все его свойства приватными, а для их чтения сделайте методы-геттеры.
 
+// Модифицируйте класс Worker из предыдущей задачи следующим образом: для свойства rate и для свойства days сделайте еще и методы-сеттеры.
+
 class Worker {
   #name;
   #surname;
@@ -45,6 +47,14 @@ class Worker {
 
   get days() {
     return this.#days;
+  }
+
+  set rate(newRate) {
+    this.#rate = newRate;
+  }
+
+  set days(newDays) {
+    this.#days = newDays;
   }
 
   getSalary() {
